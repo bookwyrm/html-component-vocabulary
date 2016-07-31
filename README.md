@@ -1,6 +1,38 @@
 # html-component-vocabulary
 A collection of sample component names and examples - because naming things is hard.
 
+## Nomenclature
+
+I am using certain terms or concepts in multiple places to bring some overall 
+coherence to the structure of the components.
+
+### Namespaces
+
+* `l-` : layout
+* `o-` : object
+* `c-` : component
+* `s-` : scope
+* `t-` : theme (frequently for reversed colors/dark)
+
+### Concepts
+
+Components (usually) don't have any inherent size - they expand to fit their 
+container (card, tab, accordion) or simply to fit their content (button, link).
+
+### Usage
+
+If a component has a modifier, do we need to include the base class? If we 
+don't include the base class, should we make the base styling use an attribute
+selector to apply the base styling to a component?
+
+**Example**
+```css
+.c-list,
+[class*="c-list--"] {
+  // Base styles go here
+}
+```
+
 ## Objects
 
 ### Media
@@ -100,7 +132,9 @@ Accordions are a contained whole, never grouped together
     </div>
     <div class="c-card__body">
       <h3 class="c-card__title"></h3>
-      <p></p>
+      <div class="c-card__content">
+        <p></p>
+      </div>
     </div>
   </section>
   <section class="c-card">
@@ -109,7 +143,9 @@ Accordions are a contained whole, never grouped together
     </div>
     <div class="c-card__body">
       <h3 class="c-card__title"></h3>
-      <p></p>
+      <div class="c-card__content">
+        <p></p>
+      </div>
     </div>
   </section>
   <section class="c-card">
@@ -118,14 +154,19 @@ Accordions are a contained whole, never grouped together
     </div>
     <div class="c-card__body">
       <h3 class="c-card__title"></h3>
-      <p></p>
+      <div class="c-card__content">
+        <p></p>
+      </div>
     </div>
   </section>
 </div>
 ```
 
 ### Buttons
+A single button can stand on its own, but multiple buttons I prefer to put in groups
 ```
+<a href="#" class="c-btn">Default Button</a>
+
 <div class="c-btn-group">
   <a href="#" class="c-btn">Default Button</a>
   <a href="#" class="c-btn c-btn--large">Large Button</a>
@@ -135,6 +176,9 @@ Accordions are a contained whole, never grouped together
 ```
 
 ### Tabs
+I prefer to build out tabs without the navigation then use JS to progressively 
+enhance the interface by converting the tab headers to navigation and adding
+the tab behavior.
 ```
 <div class="c-tab-group">
   <section class="c-tab">
@@ -166,6 +210,80 @@ Accordions are a contained whole, never grouped together
   </section>
 </div>
 ```
+
+### List
+*Question*: should it be possible to use a list component outside of a 
+`ul`/`li`? Does that make semantic sense? If we don't allow that then should we
+simply use the `li` (and not a class) for the list item?
+
+#### Basic List
+```
+<ul class="c-list">
+  <li class="c-list__item"></li>
+</ul>
+```
+
+#### Alernate Bullet List
+If we need a different kind of bullet
+```
+<ul class="c-list c-list--alt-bullet">
+  <li class="c-list__item"></li>
+</ul>
+```
+
+### Links
+#### Basic Link
+By default, most links won't need a lot of extra markup
+```
+<a href="#">Link Text</a>
+```
+
+#### More Link
+The more link has a class so that we can add some kind of arrow or other 
+indicator to it. We can get away without the extra icon markup (as used below)
+because we will be dealing with standard iconography and can simply have an
+overlay version of an arrow icon in our source and switch between the different
+versions in CSS.
+```
+<a href="#" class="c-link--more">Read More</a>
+```
+
+#### Icon Link
+Uses [Grunticon](http://www.grunticon.com) for inserting icon into page so that
+we can change the color of the (svg) icon on hover via CSS. It is better to use
+CSS to change an embedded SVG so that we can easily support adding additional
+icons without needing to add multiple versions of the iconography so the CSS.
+
+Extra span around link text is to support easily hiding the text visually and 
+just have the icon present.
+```
+<a href="#" class="c-link--icon"><i class="link__icon icon--pdf" data-grunticon-embed></i><span class="c-link__label">Download PDF</span></a>
+```
+
+### Table
+```
+<table class="c-table">
+  <caption>
+  </caption>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tfoot>
+  </tfoot>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Carousel
 
