@@ -261,6 +261,7 @@ just have the icon present.
 ```
 
 ### Table
+In progress
 ```
 <table class="c-table">
   <caption>
@@ -269,21 +270,31 @@ just have the icon present.
     <tr>
       <th></th>
       <th></th>
-      <th></th>
+      <th class="c-table__col--primary-data">Primary Data</th>
       <th></th>
     </tr>
   </thead>
   <tfoot>
-  </tfoot>
-  <tbody>
-    <tr>
-      <th scope="row"></th>
+    <tr> 
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
     </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <th scope="row">Row Title</th>
+      <td></td>
+      <td class="c-table__col--primary-data">
+        This is the column with the primary data for the table. This column you
+        want to take up as much room horizontally as possible.
+      </td>
+      <td></td>
+    </tr>
   </tbody>
 </table>
+```
 
 ### Carousel
 
