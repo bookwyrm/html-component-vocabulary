@@ -276,6 +276,12 @@ just have the icon present.
 <a href="#" class="c-link--icon"><i class="link__icon icon--pdf" data-grunticon-embed></i><span class="c-link__label">Download PDF</span></a>
 ```
 
+```sass
+.grunticon .c-link__label {
+  @include hide-visually;
+}
+```
+
 ### Table
 In progress
 ```
