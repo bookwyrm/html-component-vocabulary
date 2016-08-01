@@ -3,8 +3,7 @@ A collection of sample component names and examples - because naming things is h
 
 ## Nomenclature
 
-I am using certain terms or concepts in multiple places to bring some overall 
-coherence to the structure of the components.
+I am using certain terms or concepts in multiple places to bring some overall coherence to the structure of the components.
 
 ### Namespaces
 
@@ -17,8 +16,7 @@ coherence to the structure of the components.
 
 ### Concepts
 
-Components (usually) don't have any inherent size - they expand to fit their 
-container (card, tab, accordion) or simply to fit their content (button, link).
+Components (usually) don't have any inherent size - they expand to fit their container (card, tab, accordion) or simply to fit their content (button, link).
 
 A component could have a defined size when used in some cases:
 
@@ -27,9 +25,7 @@ A component could have a defined size when used in some cases:
 
 ### Usage
 
-If a component has a modifier, do we need to include the base class? If we 
-don't include the base class, should we make the base styling use an attribute
-selector to apply the base styling to a component?
+If a component has a modifier, do we need to include the base class? If we don't include the base class, should we make the base styling use an attribute selector to apply the base styling to a component?
 
 **Example**
 ```css
@@ -88,11 +84,9 @@ I prefer to use the phrase "container" for something that is constrained to a ma
 ```
 
 ### Tiles
-The tile layout should be used only for horizontal grouping. The height of
-individual tiles should come from the component that they contain.
+The tile layout should be used only for horizontal grouping. The height of individual tiles should come from the component that they contain.
 
-There should be no style treatment on the the tiles - any kind of background
-or rounded corners or border should be applied to the component, not the tile.
+There should be no style treatment on the the tiles - any kind of background or rounded corners or border should be applied to the component, not the tile.
 ```
 <div class="l-tile-group l-tile-group--4-up">
   <div class="l-tile">
@@ -192,9 +186,7 @@ A single button can stand on its own, but multiple buttons I prefer to put in gr
 ```
 
 ### Tabs
-I prefer to build out tabs without the navigation then use JS to progressively 
-enhance the interface by converting the tab headers to navigation and adding
-the tab behavior.
+I prefer to build out tabs without the navigation then use JS to progressively enhance the interface by converting the tab headers to navigation and adding the tab behavior.
 ```
 <div class="c-tab-group">
   <section class="c-tab">
@@ -228,9 +220,7 @@ the tab behavior.
 ```
 
 ### List
-*Question*: should it be possible to use a list component outside of a 
-`ul`/`li`? Does that make semantic sense? If we don't allow that then should we
-simply use the `li` (and not a class) for the list item?
+*Question*: should it be possible to use a list component outside of a `ul`/`li`? Does that make semantic sense? If we don't allow that then should we simply use the `li` (and not a class) for the list item?
 
 #### Basic List
 ```
@@ -255,23 +245,15 @@ By default, most links won't need a lot of extra markup
 ```
 
 #### More Link
-The more link has a class so that we can add some kind of arrow or other 
-indicator to it. We can get away without the extra icon markup (as used below)
-because we will be dealing with standard iconography and can simply have an
-overlay version of an arrow icon in our source and switch between the different
-versions in CSS.
+The more link has a class so that we can add some kind of arrow or other indicator to it. We can get away without the extra icon markup (as used below) because we will be dealing with standard iconography and can simply have an overlay version of an arrow icon in our source and switch between the different versions in CSS.
 ```
 <a href="#" class="c-link--more">Read More</a>
 ```
 
 #### Icon Link
-Uses [Grunticon](http://www.grunticon.com) for inserting icon into page so that
-we can change the color of the (svg) icon on hover via CSS. It is better to use
-CSS to change an embedded SVG so that we can easily support adding additional
-icons without needing to add multiple versions of the iconography so the CSS.
+Uses [Grunticon](http://www.grunticon.com) for inserting icon into page so that we can change the color of the (svg) icon on hover via CSS. It is better to use CSS to change an embedded SVG so that we can easily support adding additional icons without needing to add multiple versions of the iconography so the CSS.
 
-Extra span around link text is to support easily hiding the text visually and 
-just have the icon present.
+Extra span around link text is to support easily hiding the text visually and just have the icon present.
 ```
 <a href="#" class="c-link--icon"><i class="link__icon icon--pdf" data-grunticon-embed></i><span class="c-link__label">Download PDF</span></a>
 ```
@@ -319,11 +301,9 @@ In progress
 ```
 
 ### Carousel
-The carousel provides a structure and behavior for different slides to
-transition from one to another via some mechanism (usually slide or fade).
+The carousel provides a structure and behavior for different slides to transition from one to another via some mechanism (usually slide or fade).
 
-You can implement different types of carousels (via modifier on `c-carousel`)
-if you need different style treatments.
+You can implement different types of carousels (via modifier on `c-carousel`) if you need different style treatments.
 
 Carousel navigation controls (dots or arrows) should be added via JS.
 ```
@@ -343,12 +323,10 @@ Carousel navigation controls (dots or arrows) should be added via JS.
 
 #### Notes
 
-Consider using form controls for navigation dots for screen readers as in 
-[merry-go-round](https://github.com/estelle/merry-go-round).
+Consider using form controls for navigation dots for screen readers as in [merry-go-round](https://github.com/estelle/merry-go-round).
 
 ### Logo
-This looks like more markup than you need for displaying a logo but it makes
-it easy to show the logo as part of a tile layout.
+This looks like more markup than you need for displaying a logo but it makes it easy to show the logo as part of a tile layout.
 
 #### Basic Logo
 ```
