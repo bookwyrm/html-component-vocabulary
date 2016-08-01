@@ -13,6 +13,7 @@ coherence to the structure of the components.
 * `c-` : component
 * `s-` : scope
 * `t-` : theme (frequently for reversed colors/dark)
+* `js-` : JavaScript - selectors only used for targeting elements via JS, never used for applying styles
 
 ### Concepts
 
