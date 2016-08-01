@@ -88,16 +88,24 @@ I prefer to use the phrase "container" for something that is constrained to a ma
 ```
 
 ### Tiles
+The tile layout should be used only for horizontal grouping. The height of
+individual tiles should come from the component that they contain.
 
+There should be no style treatment on the the tiles - any kind of background
+or rounded corners or border should be applied to the component, not the tile.
 ```
 <div class="l-tile-group l-tile-group--4-up">
   <div class="l-tile">
+    <!-- Component goes here for the content -->
   </div>
   <div class="l-tile">
+    <!-- Component goes here for the content -->
   </div>
   <div class="l-tile">
+    <!-- Component goes here for the content -->
   </div>
   <div class="l-tile">
+    <!-- Component goes here for the content -->
   </div>
 </div>
 ```
