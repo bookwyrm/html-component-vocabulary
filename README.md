@@ -340,6 +340,33 @@ Carousel navigation controls (dots or arrows) should be added via JS.
 Consider using form controls for navigation dots for screen readers as in 
 [merry-go-round](https://github.com/estelle/merry-go-round).
 
+### Logo
+This looks like more markup than you need for displaying a logo but it makes
+it easy to show the logo as part of a tile layout.
+
+#### Basic Logo
+```
+<div class="c-logo">
+  <img src="http://placehold.it/100x75" alt="Company Logo for Company X" class="c-logo__img">
+</div>
+```
+
+#### Logo for a grid
+```html
+<div class="c-logo c-logo--tile">
+  <img src="http://placehold.it/100x75" alt="Company Logo for Company X" class="c-logo__img">
+</div>
+```
+
+```css
+.c-logo--tile {
+  width: 140px;
+  height: 140px;
+  padding: 20px;
+  background: #efefef;
+}
+```
+
 ### Press Release
 
 ### News Article
