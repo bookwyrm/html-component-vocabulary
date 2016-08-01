@@ -12,6 +12,7 @@ I am using certain terms or concepts in multiple places to bring some overall co
 * `c-` : component
 * `s-` : scope
 * `t-` : theme (frequently for reversed colors/dark)
+* `w-` : widget
 * `js-` : JavaScript - selectors only used for targeting elements via JS, never used for applying styles
 
 ### Concepts
@@ -446,6 +447,12 @@ Just pick one and stick with it.
   </fieldset>
 </form>
 ```
+
+## Widget
+
+A widget is differentiated from a component in that a component is generally static while a widget generally has some level of interactivity.
+
+### Filter
 
 ## Navigation
 
