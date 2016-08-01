@@ -298,6 +298,32 @@ In progress
 ```
 
 ### Carousel
+The carousel provides a structure and behavior for different slides to
+transition from one to another via some mechanism (usually slide or fade).
+
+You can implement different types of carousels (via modifier on `c-carousel`)
+if you need different style treatments.
+
+Carousel navigation controls (dots or arrows) should be added via JS.
+```
+<div class="c-carousel js-carousel">
+  <h2 class="c-carousel__title">A title for the carousel</h2>
+  <div class="c-carousel__slide">
+    <!-- Component goes here for the content -->
+  </div>
+  <div class="c-carousel__slide">
+    <!-- Component goes here for the content -->
+  </div>
+  <div class="c-carousel__slide">
+    <!-- Component goes here for the content -->
+  </div>
+</div>
+```
+
+#### Notes
+
+Consider using form controls for navigation dots for screen readers as in 
+[merry-go-round](https://github.com/estelle/merry-go-round).
 
 ### Press Release
 
