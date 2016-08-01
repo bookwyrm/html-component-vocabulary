@@ -20,6 +20,11 @@ coherence to the structure of the components.
 Components (usually) don't have any inherent size - they expand to fit their 
 container (card, tab, accordion) or simply to fit their content (button, link).
 
+A component could have a defined size when used in some cases:
+
+* Fixed-width button to fit specific design criteria
+* `height` or `min-height` when a component is used in a tile layout (to enforce consistency).
+
 ### Usage
 
 If a component has a modifier, do we need to include the base class? If we 
