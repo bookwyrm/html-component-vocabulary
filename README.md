@@ -353,7 +353,63 @@ This looks like more markup than you need for displaying a logo but it makes it 
 
 ### Press Release
 
-### News Article
+### Article
+
+#### Teaser
+Meant to provide a link to the article content on an aggregator or corporate website where different articles could come from different publications.
+```
+<div class="c-article">
+  <div class="c-article__media">
+    <!-- Logo Component -->
+  </div>
+  <div class="c-article__body">
+    <h3 class="c-article__title"><a href="#" class="c-article__link">Headline</a></h3>
+    <p class="c-article__summary"></p>
+  </div>
+</div>
+```
+
+#### Full
+```
+<div class="c-article">
+  <div class="c-article__media">
+    <img src="#" class="c-article__thumbnail">
+  </div>
+  <div class="c-article__body">
+    <h1 class="c-article__title"><a href="#" class="c-article__link">Headline</a></h1>
+    <h2 class="c-article__subtitle"></h2>
+    <div class="c-article__meta">
+      <span class="c-article__author">John Doe</span>
+      <time class="c-article__date">August 1, 2016</time>
+    </div>
+    <div class="c-article__content">
+      <p class="c-article__summary"></p>
+      <div class="s-user-content">
+        <h3></h3>
+        <p></p>
+        <p></p>
+        <h3></h3>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+*Move the `__meta` info around in markup based on where your design needs it.*
+
+#### Variants
+
+The article summary could have different names including:
+
+* `c-article__summary`
+* `c-article__description`
+* `c-article__abstract`
+* `c-article__lead`
+* `c-article__intro`
+
+Just pick one and stick with it.
 
 ### Award
 
