@@ -82,7 +82,7 @@ I prefer to use the phrase "container" for something that is constrained to a ma
 </div>
 ```
 
-## Components
+### Tiles
 
 ```
 <div class="l-tile-group l-tile-group--4-up">
@@ -96,6 +96,8 @@ I prefer to use the phrase "container" for something that is constrained to a ma
   </div>
 </div>
 ```
+
+## Components
 
 ### Accordion
 Accordions are a contained whole, never grouped together
