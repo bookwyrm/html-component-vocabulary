@@ -34,6 +34,17 @@ If a component has a modifier, do we need to include the base class? If we don't
   // Base styles go here
 }
 ```
+### Common "labels"
+* `-group` : A group of a component (e.g. `c-btn-group`)
+
+*Question: Should this be treated like an element instead? Does `c-btn__group` make sense as a wrapper for several `c-btn`s?*
+
+### Common "elements"
+*This is "element" in the BEM sense, not the HTML sense.*
+
+* `__media` : Wrapper around video or image (media) content
+* `__body` : Wrapper around primary content for a component
+* `__title` : Primary title for a component
 
 ## Objects
 
@@ -334,6 +345,8 @@ This looks like more markup than you need for displaying a logo but it makes it 
   <img src="http://placehold.it/100x75" alt="Company Logo for Company X" class="c-logo__img">
 </div>
 ```
+
+Usually `.c-logo` will have no styles on it.
 
 #### Logo for a grid
 ```html
