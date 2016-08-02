@@ -312,31 +312,6 @@ In progress
 </table>
 ```
 
-### Carousel
-The carousel provides a structure and behavior for different slides to transition from one to another via some mechanism (usually slide or fade).
-
-You can implement different types of carousels (via modifier on `c-carousel`) if you need different style treatments.
-
-Carousel navigation controls (dots or arrows) should be added via JS.
-```
-<div class="c-carousel js-carousel">
-  <h2 class="c-carousel__title">A title for the carousel</h2>
-  <div class="c-carousel__slide">
-    <!-- Component goes here for the content -->
-  </div>
-  <div class="c-carousel__slide">
-    <!-- Component goes here for the content -->
-  </div>
-  <div class="c-carousel__slide">
-    <!-- Component goes here for the content -->
-  </div>
-</div>
-```
-
-#### Notes
-
-Consider using form controls for navigation dots for screen readers as in [merry-go-round](https://github.com/estelle/merry-go-round).
-
 ### Logo
 This looks like more markup than you need for displaying a logo but it makes it easy to show the logo as part of a tile layout.
 
@@ -451,6 +426,32 @@ Just pick one and stick with it.
 ## Widget
 
 A widget is differentiated from a component in that a component is generally static while a widget generally has some level of interactivity.
+
+### Carousel
+The carousel provides a structure and behavior for different slides to transition from one to another via some mechanism (usually slide or fade).
+
+You can implement different types of carousels (via modifier on `w-carousel` e.g. `w-carousel--logo` or `w-carousel--video`) if you need different style treatments.
+
+Carousel navigation controls (dots or arrows) should be added via JS.
+```
+<div class="w-carousel js-carousel">
+  <h2 class="w-carousel__title">A title for the carousel</h2>
+  <div class="w-carousel__slide">
+    <!-- Component goes here for the content -->
+  </div>
+  <div class="w-carousel__slide">
+    <!-- Component goes here for the content -->
+  </div>
+  <div class="w-carousel__slide">
+    <!-- Component goes here for the content -->
+  </div>
+</div>
+```
+
+#### Notes
+
+Consider using form controls for navigation dots for screen readers as in [merry-go-round](https://github.com/estelle/merry-go-round).
+
 
 ### Filter
 
