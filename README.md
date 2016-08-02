@@ -197,40 +197,6 @@ A single button can stand on its own, but multiple buttons I prefer to put in gr
 </div>
 ```
 
-### Tabs
-I prefer to build out tabs without the navigation then use JS to progressively enhance the interface by converting the tab headers to navigation and adding the tab behavior.
-```
-<div class="c-tab-group">
-  <section class="c-tab">
-    <header class="c-tab__header">
-      <h2 class="c-tab__title"></h2>
-    </header>
-    <div class="c-tab__body">
-      <h3></h3>
-      <p></p>
-    </div>
-  </section>
-  <section class="c-tab">
-    <header class="c-tab__header">
-      <h2 class="c-tab__title"></h2>
-    </header>
-    <div class="c-tab__body">
-      <h3></h3>
-      <p></p>
-    </div>
-  </section>
-  <section class="c-tab">
-    <header class="c-tab__header">
-      <h2 class="c-tab__title"></h2>
-    </header>
-    <div class="c-tab__body">
-      <h3></h3>
-      <p></p>
-    </div>
-  </section>
-</div>
-```
-
 ### List
 *Question*: should it be possible to use a list component outside of a `ul`/`li`? Does that make semantic sense? If we don't allow that then should we simply use the `li` (and not a class) for the list item?
 
@@ -426,6 +392,40 @@ Just pick one and stick with it.
 ## Widget
 
 A widget is differentiated from a component in that a component is generally static while a widget generally has some level of interactivity.
+
+### Tabs
+I prefer to build out tabs without the navigation then use JS to progressively enhance the interface by converting the tab headers to navigation and adding the tab behavior.
+```
+<div class="w-tab-group">
+  <section class="w-tab">
+    <header class="w-tab__header">
+      <h2 class="w-tab__title"></h2>
+    </header>
+    <div class="w-tab__body">
+      <h3></h3>
+      <p></p>
+    </div>
+  </section>
+  <section class="w-tab">
+    <header class="w-tab__header">
+      <h2 class="w-tab__title"></h2>
+    </header>
+    <div class="w-tab__body">
+      <h3></h3>
+      <p></p>
+    </div>
+  </section>
+  <section class="w-tab">
+    <header class="w-tab__header">
+      <h2 class="w-tab__title"></h2>
+    </header>
+    <div class="w-tab__body">
+      <h3></h3>
+      <p></p>
+    </div>
+  </section>
+</div>
+```
 
 ### Carousel
 The carousel provides a structure and behavior for different slides to transition from one to another via some mechanism (usually slide or fade).
