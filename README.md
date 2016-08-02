@@ -350,6 +350,7 @@ Just pick one and stick with it.
 
 ### Quote
 
+### Resource
 
 ### Bio
 
