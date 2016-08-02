@@ -53,7 +53,7 @@ If a component has a modifier, do we need to include the base class? If we don't
 
 ### Media
 
-```
+```html
 <div class="o-media">
   <div class="o-media__media">
     <img src="#" class="o-media__img">
@@ -75,7 +75,7 @@ I prefer to use the phrase "container" for something that is constrained to a ma
 
 ### Grids
 
-```
+```html
 <div class="l-grid__row">
   <div class="l-grid__col l-grid__col--1"></div>
   <div class="l-grid__col l-grid__col--14"></div>
@@ -101,7 +101,7 @@ I prefer to use the phrase "container" for something that is constrained to a ma
 The tile layout should be used only for horizontal grouping. The height of individual tiles should come from the component that they contain.
 
 There should be no style treatment on the the tiles - any kind of background or rounded corners or border should be applied to the component, not the tile.
-```
+```html
 <div class="l-tile-group l-tile-group--4-up">
   <div class="l-tile">
     <!-- Component goes here for the content -->
@@ -122,7 +122,7 @@ There should be no style treatment on the the tiles - any kind of background or 
 
 ### Cards
 
-```
+```html
 <div class="c-card-group">
   <section class="c-card">
     <div class="c-card__media">
@@ -162,7 +162,7 @@ There should be no style treatment on the the tiles - any kind of background or 
 
 ### Buttons
 A single button can stand on its own, but multiple buttons I prefer to put in groups
-```
+```html
 <a href="#" class="c-btn">Default Button</a>
 
 <div class="c-btn-group">
@@ -177,7 +177,7 @@ A single button can stand on its own, but multiple buttons I prefer to put in gr
 *Question*: should it be possible to use a list component outside of a `ul`/`li`? Does that make semantic sense? If we don't allow that then should we simply use the `li` (and not a class) for the list item?
 
 #### Basic List
-```
+```html
 <ul class="c-list">
   <li class="c-list__item"></li>
 </ul>
@@ -185,7 +185,7 @@ A single button can stand on its own, but multiple buttons I prefer to put in gr
 
 #### Alernate Bullet List
 If we need a different kind of bullet
-```
+```html
 <ul class="c-list c-list--alt-bullet">
   <li class="c-list__item"></li>
 </ul>
@@ -194,13 +194,13 @@ If we need a different kind of bullet
 ### Links
 #### Basic Link
 By default, most links won't need a lot of extra markup
-```
+```html
 <a href="#">Link Text</a>
 ```
 
 #### More Link
 The more link has a class so that we can add some kind of arrow or other indicator to it. We can get away without the extra icon markup (as used below) because we will be dealing with standard iconography and can simply have an overlay version of an arrow icon in our source and switch between the different versions in CSS.
-```
+```html
 <a href="#" class="c-link--more">Read More</a>
 ```
 
@@ -208,7 +208,7 @@ The more link has a class so that we can add some kind of arrow or other indicat
 Uses [Grunticon](http://www.grunticon.com) for inserting icon into page so that we can change the color of the (svg) icon on hover via CSS. It is better to use CSS to change an embedded SVG so that we can easily support adding additional icons without needing to add multiple versions of the iconography so the CSS.
 
 Extra span around link text is to support easily hiding the text visually and just have the icon present.
-```
+```html
 <a href="#" class="c-link--icon"><i class="link__icon icon--pdf" data-grunticon-embed></i><span class="c-link__label">Download PDF</span></a>
 ```
 
@@ -220,7 +220,7 @@ Extra span around link text is to support easily hiding the text visually and ju
 
 ### Table
 In progress
-```
+```html
 <table class="c-table">
   <caption>
   </caption>
@@ -258,7 +258,7 @@ In progress
 This looks like more markup than you need for displaying a logo but it makes it easy to show the logo as part of a tile layout.
 
 #### Basic Logo
-```
+```html
 <div class="c-logo">
   <img src="http://placehold.it/100x75" alt="Company Logo for Company X" class="c-logo__img">
 </div>
@@ -288,7 +288,7 @@ Usually `.c-logo` will have no styles on it. It is just there for grouping and m
 
 #### Teaser
 Meant to provide a link to the article content on an aggregator or corporate website where different articles could come from different publications.
-```
+```html
 <div class="c-article">
   <div class="c-article__media">
     <!-- Logo Component -->
@@ -301,7 +301,7 @@ Meant to provide a link to the article content on an aggregator or corporate web
 ```
 
 #### Full
-```
+```html
 <div class="c-article">
   <div class="c-article__media">
     <img src="#" class="c-article__thumbnail">
@@ -358,7 +358,7 @@ Just pick one and stick with it.
 
 ## Forms
 
-```
+```html
 <form class="c-form">
   <fieldset>
   </fieldset>
@@ -372,7 +372,7 @@ A widget is differentiated from a component in that a component is generally sta
 ### Accordion
 Accordions are a contained whole, never grouped together
 
-```
+```html
 <div class="w-accordion">
   <section class="w-accordion__item">
     <header class="w-accordion__header">
@@ -397,7 +397,7 @@ Accordions are a contained whole, never grouped together
 
 ### Tabs
 I prefer to build out tabs without the navigation then use JS to progressively enhance the interface by converting the tab headers to navigation and adding the tab behavior.
-```
+```html
 <div class="w-tab-group">
   <section class="w-tab">
     <header class="w-tab__header">
@@ -435,7 +435,7 @@ The carousel provides a structure and behavior for different slides to transitio
 You can implement different types of carousels (via modifier on `w-carousel` e.g. `w-carousel--logo` or `w-carousel--video`) if you need different style treatments.
 
 Carousel navigation controls (dots or arrows) should be added via JS.
-```
+```html
 <div class="w-carousel js-carousel">
   <h2 class="w-carousel__title">A title for the carousel</h2>
   <div class="w-carousel__slide">
@@ -551,7 +551,7 @@ A filter control provides the ability to filter a list of items. Depending on th
 
 ### Toolbar or Eyebrow
 
-```
+```html
 <div class="c-nav c-nav--toolbar">
   <ul class="c-nav-group">
     <li class="c-nav__item"><a href="#" class="c-nav__link">One</a></li>
