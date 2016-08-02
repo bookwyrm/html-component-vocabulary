@@ -36,7 +36,7 @@ If a component has a modifier, do we need to include the base class? If we don't
 }
 ```
 ### Common "labels"
-* `-group` : A group of a component (e.g. `c-btn-group`)
+* `-group` : A group of a component (e.g. `c-btn-group`, `c-list-group`)
 
 *Question: Should this be treated like an element instead? Does `c-btn__group` make sense as a wrapper for several `c-btn`s?*
 
@@ -347,7 +347,7 @@ This looks like more markup than you need for displaying a logo but it makes it 
 </div>
 ```
 
-Usually `.c-logo` will have no styles on it.
+Usually `.c-logo` will have no styles on it. It is just there for grouping and modifier styling.
 
 #### Logo for a grid
 ```html
