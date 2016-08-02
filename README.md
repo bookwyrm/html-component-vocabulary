@@ -66,7 +66,7 @@ If a component has a modifier, do we need to include the base class? If we don't
 
 ### Container
 I prefer to use the phrase "container" for something that is constrained to a maximum page width since I tend to use "wrapper" for edge-to-edge in viewport
-```
+```html
 <div class="o-container">
 </div>
 ```
