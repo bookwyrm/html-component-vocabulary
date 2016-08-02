@@ -350,7 +350,6 @@ Just pick one and stick with it.
 
 ### Quote
 
-### Slider
 
 ### Bio
 
@@ -544,6 +543,8 @@ A filter control provides the ability to filter a list of items. Depending on th
   // Font treatment for selected item label
 }
 ```
+
+### Slider
 
 ## Navigation
 
