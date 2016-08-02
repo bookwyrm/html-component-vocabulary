@@ -454,8 +454,96 @@ Carousel navigation controls (dots or arrows) should be added via JS.
 
 Consider using form controls for navigation dots for screen readers as in [merry-go-round](https://github.com/estelle/merry-go-round).
 
-
 ### Filter
+A filter control provides the ability to filter a list of items. Depending on the design a filter might be the functional equivalent of a select, radio buttons, or checkboxes.
+
+#### Radio Buttons (single value)
+```html
+<div class="w-filter">
+  <div class="w-filter__control js-filter__control--single">
+    <span class="w-filter__label">Resource Type(s):</span>
+    <span class="w-filter__field">
+      <input type="radio" id="FilterControlAll" name="filter-control" value="all" class="w-filter__input js-filter__input" checked="checked">
+      <label for="FilterControlAll">All</label>
+    </span>
+    <span class="w-filter__field">
+      <input type="radio" id="FilterControlDatasheet" name="filter-control" value="datasheet" class="w-filter__input js-filter__input">
+      <label for="FilterControlDataSheet">Datasheets</label>
+    </span>
+    <span class="w-filter__field">
+      <input type="radio" id="FilterControlWhitePaper" name="filter-control" value="white-paper" class="w-filter__input js-filter__input">
+      <label for="FilterControlWhitePaper">White Papers</label>
+    </span>
+  </div>
+  <div class="w-filter__body">
+    <div class="w-filter__item js-filter__item" data-js-filter-values="datasheet">
+      <!-- Datasheet goes here -->
+    </div>
+    <div class="w-filter__item js-filter__item" data-js-filter-values="white-paper">
+      <!-- White Paper goes here -->
+    </div>
+  </div>
+</div>
+```
+
+```css
+.w-filter__input:checked + label {
+  // Font treatment for selected item label
+}
+```
+
+#### Select (single value)
+```html
+<div class="w-filter">
+  <div class="w-filter__control js-filter__control--single">
+    <span class="w-filter__label">Resource Type:</span>
+    <select name="filter-control" class="w-filter__input js-filter__input">
+      <option value="all">All</option>
+      <option value="datasheet">Datasheets</option>
+      <option value="white-paper">White Papers</option>
+    </select>
+  </div>
+  <div class="w-filter__body">
+    <div class="w-filter__item js-filter__item" data-js-filter-values="datasheet">
+      <!-- Datasheet goes here -->
+    </div>
+    <div class="w-filter__item js-filter__item" data-js-filter-values="white-paper">
+      <!-- White Paper goes here -->
+    </div>
+  </div>
+</div>
+```
+
+#### Checkbox (multiple values)
+```html
+<div class="w-filter">
+  <div class="w-filter__control js-filter__control--multiple">
+    <span class="w-filter__label">Resource Type(s):</span>
+    <span class="w-filter__field">
+      <input type="checkbox" id="FilterControlDatasheet" name="filter-control" value="datasheet" class="w-filter__input js-filter__input" checked="checked">
+      <label for="FilterControlDataSheet">Datasheets</label>
+    </span>
+    <span class="w-filter__field">
+      <input type="checkbox" id="FilterControlWhitePaper" name="filter-control" value="white-paper" class="w-filter__input js-filter__input" checked="checked">
+      <label for="FilterControlWhitePaper">White Papers</label>
+    </span>
+  </div>
+  <div class="w-filter__body">
+    <div class="w-filter__item js-filter__item" data-js-filter-values="datasheet">
+      <!-- Datasheet goes here -->
+    </div>
+    <div class="w-filter__item js-filter__item" data-js-filter-values="white-paper">
+      <!-- White Paper goes here -->
+    </div>
+  </div>
+</div>
+```
+
+```css
+.w-filter__input:checked + label {
+  // Font treatment for selected item label
+}
+```
 
 ## Navigation
 
