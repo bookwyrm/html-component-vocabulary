@@ -118,32 +118,6 @@ There should be no style treatment on the the tiles - any kind of background or 
 
 ## Components
 
-### Accordion
-Accordions are a contained whole, never grouped together
-
-```
-<div class="c-accordion">
-  <section class="c-accordion__item">
-    <header class="c-accordion__header">
-      <h2 class="c-accordion__title"></h2>
-    </header>
-    <div class="c-accordion__body">
-      <h3></h3>
-      <p></p>
-    </div>
-  </section>
-  <section class="c-accordion__item">
-    <header class="c-accordion__header">
-      <h2 class="c-accordion__title"></h2>
-    </header>
-    <div class="c-accordion__body">
-      <h3></h3>
-      <p></p>
-    </div>
-  </section>
-</div>
-```
-
 ### Cards
 
 ```
@@ -392,6 +366,32 @@ Just pick one and stick with it.
 ## Widget
 
 A widget is differentiated from a component in that a component is generally static while a widget generally has some level of interactivity.
+
+### Accordion
+Accordions are a contained whole, never grouped together
+
+```
+<div class="w-accordion">
+  <section class="w-accordion__item">
+    <header class="w-accordion__header">
+      <h2 class="w-accordion__title"></h2>
+    </header>
+    <div class="w-accordion__body">
+      <h3></h3>
+      <p></p>
+    </div>
+  </section>
+  <section class="w-accordion__item">
+    <header class="w-accordion__header">
+      <h2 class="w-accordion__title"></h2>
+    </header>
+    <div class="w-accordion__body">
+      <h3></h3>
+      <p></p>
+    </div>
+  </section>
+</div>
+```
 
 ### Tabs
 I prefer to build out tabs without the navigation then use JS to progressively enhance the interface by converting the tab headers to navigation and adding the tab behavior.
