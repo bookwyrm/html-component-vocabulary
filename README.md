@@ -17,7 +17,9 @@ I am using certain terms or concepts in multiple places to bring some overall co
 
 ### Concepts
 
-Components (usually) don't have any inherent size - they expand to fit their container (card, tab, accordion) or simply to fit their content (button, link).
+Components (usually) don't have any inherent size - they expand to fit their container (card, article, table) or simply to fit their content (button, link).
+
+A Widget is like a component but is only meaningful with some kind of behavior or (more-than-hover) interactivity. While Components are static, widgets expand and collapse and hide and show content. It is extremely uncommon to have a widget without supporting JavaScript.
 
 A component could have a defined size when used in some cases:
 
