@@ -119,6 +119,43 @@ There should be no style treatment on the the tiles - any kind of background or 
 </div>
 ```
 
+## Globals
+These are components in the sense that they are discrete chunks of markup but they are intended to be used in a site wrapper and be global to an entire site. Globals should not be used in content areas of a web page.
+
+### Header / Masthead
+Add more structure or components here as necessary.
+```html
+<header class="g-masthead">
+  <!-- Site Branding Global -->
+  <!-- Toolbar Navigation -->
+  <!-- Site Navigation -->
+</header>
+```
+
+### Site Branding
+Note, we are not using the [Logo Component](#logo) because of the [Organization markup](http://schema.org/Organization) for [schema.org](http://schema.org)
+```html
+<div class="g-site-branding" itemscope itemtype="http://schema.org/Organization">
+  <a href="http://www.example.com/" title="Example Organization Name" rel="home" itemprop="url">
+    <img src="logo.svg" alt="Example Organization Logo" class="g-site-branding__logo" itemprop="logo">
+  </a>
+</div>
+```
+
+### Footer
+Add more structure or components here as necessary.
+```html
+<footer class="g-footer">
+  <!-- Footer Navigation -->
+  <!-- Social Media Component -->
+  <!-- Newsletter Signup Component -->
+  <div class="g-footer__meta">
+    <span class="g-footer__copyright">© 2016 Some Company, All rights reserved.</span>
+    <!-- Footer Links Navigation -->
+  </div>
+</footer>
+```
+
 ## Components
 
 ### Cards
