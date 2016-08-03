@@ -407,6 +407,9 @@ Just pick one and stick with it.
 </div>
 ```
 
+### Social Media Profiles
+These are links to the organization's social media profiles. They are not for social media sharing.
+
 ### Sitemap
 
 ## Forms
