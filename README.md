@@ -10,6 +10,7 @@ I am using certain terms or concepts in multiple places to bring some overall co
 * `l-` : layout
 * `o-` : object
 * `c-` : component
+* `g-` : global (global page elements like header and footer)
 * `s-` : scope
 * `t-` : theme (frequently for reversed colors/dark)
 * `w-` : widget
@@ -353,6 +354,21 @@ Just pick one and stick with it.
 ### Resource
 
 ### Bio
+```html
+<div class="c-bio">
+  <div class="c-bio__media">
+    <img src="" class="c-bio__image" alt="">
+  </div>
+  <div class="c-bio__body">
+    <h3 class="c-bio__name">John Doe</h3>
+    <h4 class="c-bio__title">President and CEO</h4>
+    <div class="c-bio__content">
+      <p></p>
+      <p></p>
+    </div>
+  <div>
+</div>
+```
 
 ### Sitemap
 
