@@ -322,12 +322,56 @@ Usually `.c-logo` will have no styles on it. It is just there for grouping and m
 
 ### Press Release
 
+#### Teaser
+```html
+<article class="c-press-release c-press-release--teaser">
+  <h3 class="c-press-release__title"><a href="#" class="c-press-release__link">Headline</a></h3>
+  <h4 class="c-press-release__subtitle">Subtitle</h3>
+  <time class="c-press-release__date">August 4, 2016</time>
+  <p class="c-press-release__summary"></p>
+  <footer>
+    <!-- More Link -->
+  </footer>
+</article>
+```
+
+#### Full
+```html
+<article class="c-press-release c-press-release--full">
+  <header class="c-press-release__header">
+    <h1 class="c-press-release__title">Headline</h1>
+    <h2 class="c-press-release__subtitle">Subtitle</h2>
+  </header>
+  <section class="c-press-release__content s-user-content">
+    <p class="c-press-release__intro">
+      <span class="c-press-release__location">Nevada City, CA</span>
+      <time class="c-press-release__date">August 4, 2016</time>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <p></p>
+    <h3>Section title</h3>
+    <p></p>
+  </section>
+  <section class="c-press-release__boilerplate c-press-release__boilerplate--company">
+    <h3>About Company</h3>
+    <p>Writeup about the company that issued the Press Release.</p>
+  </section>
+  <section class="c-press-release__boilerplate c-press-release__boilerplate--other">
+    <h3>About Other Company</h3>
+    <p>Writeup about another company in the press release.</p>
+  </section>
+  <section class="c-press-release__more-info s-user-content">
+    <p>More info like trademarks and warnings about future-looking statements</p>
+  </section>
+</article>
+```
+
 ### Article
 
 #### Teaser
 Meant to provide a link to the article content on an aggregator or corporate website where different articles could come from different publications.
 ```html
-<div class="c-article">
+<div class="c-article c-article--teaser">
   <div class="c-article__media">
     <!-- Logo Component -->
   </div>
@@ -340,7 +384,7 @@ Meant to provide a link to the article content on an aggregator or corporate web
 
 #### Full
 ```html
-<div class="c-article">
+<div class="c-article c-article--full">
   <div class="c-article__media">
     <img src="#" class="c-article__thumbnail">
   </div>
@@ -370,6 +414,11 @@ Meant to provide a link to the article content on an aggregator or corporate web
 
 #### Variants
 
+The author could have different names including:
+
+* `c-article__author`
+* `c-article__byline`
+
 The article summary could have different names including:
 
 * `c-article__summary`
@@ -381,14 +430,64 @@ The article summary could have different names including:
 Just pick one and stick with it.
 
 ### Award
+```html
+<article class="c-award">
+  <div classs="c-award__media">
+    <img src="#" class="c-award__image">
+  </div>
+  <div class="c-award__body">
+    <h3 class="c-award__name"><a href="#" class="c-award__link">Award Name</a></h3>
+  </div>
+</article>
+```
 
 ### Blog Post
 
 ### Event
+```html
+<article class="c-event">
+  <div class="c-event__media">
+    <img src="#" class="c-event__image">
+  </div>
+  <div class="c-event__body">
+    <h3 class="c-event__name"><a href="#" class="c-event__link">Event Name</a></h3>
+    <time class="c-event__date">August 4, 2016</time>
+    <span class="c-event__location">Nevada City, CA</span>
+    <span class="c-event__venue">Venu</span>
+    <p class="c-event__description">Event description</p>
+    <footer>
+      <!-- More Link Component -->
+    </footer>
+  </div>
+</article>
+```
 
 ### Quote
+```html
+<blockquote class="c-quote">
+  <div class="c-quote__media">
+    <img src="#" class="c-quote__image" alt="">
+  </div>
+  <div class="c-quote__body">
+    <p class="c-quote__text">“Some very profound words”</p>
+    <cite class="c-quote__attribution">Matt Vanderpol</cite>
+  </div>
+</blockquote>
+```
 
 ### Resource
+```html
+<article class="c-resource c-resourcee--white-paper">
+  <div class="c-resource__media">
+    <img src="#" class="c-resource__media" alt="">
+  </div>
+  <div class="c-resource__body">
+    <h3 class="c-resource__title"><a href="#" class="c-resource__link">White Paper Title</a></h3>
+    <h4 class="c-resource__type">White Paper</h4>
+    <p class="c-resource__description">Description of the resources</p>
+  </div>
+</article>
+```
 
 ### Bio
 ```html
@@ -409,15 +508,46 @@ Just pick one and stick with it.
 
 ### Social Media Profiles
 These are links to the organization's social media profiles. They are not for social media sharing.
-
-### Sitemap
+```html
+<div class="c-social-media">
+  <a href="#" class="c-social-media__network c-social-media__network--twitter icon--twitter">Twitter</a>
+  <a href="#" class="c-social-media__network c-social-media__network--facebook icon--facebook">Facebook</a>
+  <a href="#" class="c-social-media__network c-social-media__network--linkedin icon--linkedin">Linked In</a>
+</div>
+```
 
 ## Forms
 
+### Account Signup
 ```html
-<form class="c-form">
-  <fieldset>
+<form class="c-form c-form--signup">
+  <fieldset class="c-form__field-group">
+    <div class="c-form__field c-form__field--text">
+      <label class="c-form__label" for="name--signup">Name</label>
+      <input class="c-form__input c-form__input--text" type="text" name="name" id="name--signup">
+      <p class="c-form__note">A note about the field</p>
+    </div>
+    <div class="c-form__field c-form__field--email">
+      <label class="c-form__label" for="email--signup">Email</label>
+      <input class="c-form__input c-form__input--email" type="email" name="email" id="email--signup">
+    </div>
+    <div class="c-form__field c-form__field--password">
+      <label class="c-form__label" for="password--signup">Password</label>
+      <input class="c-form__input c-form__input--password" type="password" name="password id="password--signup">
+      <p class="c-form__note">Password must be atleast 8 characters long with at least 1 number and 1 symbol</p>
+    </div>
+    <div class="c-form__field-group c-form__field-group--checkbox">
+      <div class="c-form__field c-form__field--checkbox">
+        <input class="c-form__input c-form__input--checkbox" type="checkbox" name="accept_tos" value="yes" id="accept_tos--signup">
+        <label for="accept_tos--signup">I accept the <a href="#">Terms and Conditions</a></label>
+      </div>
+    </div>
   </fieldset>
+  <div class="c-form__field-group c-form__field-group--actions">
+    <div class="c-form__field c-form__field--submit">
+      <input class="c-form__input c-form__input--submit" type="submit" value="Sign Up">
+    </div>
+  </div>
 </form>
 ```
 
