@@ -1,6 +1,51 @@
 # html-component-vocabulary
 A collection of sample component names and examples - because naming things is hard.
 
+## Table of Contents
+
+1. [Nomenclaure](#nomenclature)
+    1. [Namespaces](#namespaces)
+    - [Concepts](#concepts)
+    - [Usage](#usage)
+    - [Common “labels”](#commonlabels)
+    - [Common “elements”](#commonelements)
+- [Objects](#objects)
+    1. [Media](#media)
+    - [Container](#container)
+    - [Breakout](#breakout)
+- [Layouts](#layouts)
+    1. [Grid](#grid)
+    - [Tile](#tile)
+- [Globals](#globals)
+    1. [Header / Masthead](#headermasthead)
+    - [Site Branding](#sitebranding)
+    - [Footer](#footer)
+- [Components](#components)
+    1. [Card](#card)
+    - [Button](#button)
+    - [List](#list)
+    - [Link](#link)
+    - [Table](#table)
+    - [Logo](#logo)
+    - [Press Release](#pressrelease)
+    - [Article](#article)
+    - [Award](#award)
+    - [Event](#event)
+    - [Quote](#quote)
+    - [Resource](#resource)
+    - [Bio](#bio)
+    - [Social Media Profiles](#socialmediaprofiles)
+- [Forms](#forms)
+    1. [Account Signup](#accountsignup)
+- [Widgets](#widgets)
+    1. [Accordion](#accordion)
+    - [Tabs](#tabs)
+    - [Carousel](#carousel)
+    - [Filter](#filter)
+    - [Slider](#slider)
+- [Navigation](#navigation)
+    - [Toolbar or Eyebrow](#toolbaroreyebrow)
+
 ## Nomenclature
 
 I am using certain terms or concepts in multiple places to bring some overall coherence to the structure of the components.
@@ -18,9 +63,9 @@ I am using certain terms or concepts in multiple places to bring some overall co
 
 ### Concepts
 
-Components (usually) don't have any inherent size - they expand to fit their container (card, article, table) or simply to fit their content (button, link).
+**Components** (usually) don't have any inherent size - most (e.g. card, article, table) expand to fit their **Layout** while others (e.g. button, link) fit their content.
 
-A Widget is like a component but is only meaningful with some kind of behavior or (more-than-hover) interactivity. While Components are static, widgets expand and collapse and hide and show content. It is extremely uncommon to have a widget without supporting JavaScript.
+A **Widget** is like a component but is only meaningful with some kind of behavior or (more-than-hover) interactivity. While Components are static, widgets expand and collapse and hide and show content. It is extremely uncommon to have a widget without supporting JavaScript.
 
 A component could have a defined size when used in some cases:
 
@@ -29,7 +74,7 @@ A component could have a defined size when used in some cases:
 
 ### Usage
 
-If a component has a modifier, do we need to include the base class? If we don't include the base class, should we make the base styling use an attribute selector to apply the base styling to a component?
+*If a component has a modifier, do we need to include the base class? If we don't include the base class, should we make the base styling use an attribute selector to apply the base styling to a component?*
 
 **Example**
 ```css
@@ -51,9 +96,10 @@ If a component has a modifier, do we need to include the base class? If we don't
 * `__title` : Primary title for a component
 
 ## Objects
+Standard patterns that can be carried from one project to another and should always have a consistent meaning.
 
 ### Media
-
+The canonical [OOCSS media object](https://github.com/stubbornella/oocss/wiki/Content#media-object-) example
 ```html
 <div class="o-media">
   <div class="o-media__media">
@@ -72,10 +118,24 @@ I prefer to use the phrase "container" for something that is constrained to a ma
 </div>
 ```
 
+### Breakout
+Based on [Breaking Out with Viewport Units and Calc](https://cloudfour.com/thinks/breaking-out-with-viewport-units-and-calc/)
+```html
+<div class="o-breakout">
+</div>
+```
+
+```css
+.o-breakout {
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+```
+
 ## Layouts
 
-### Grids
-
+### Grid
+This is a fairly standard grid or column layout and can vary widely in implementation. It is a fairly well understood construct and is included here for completeness.
 ```html
 <div class="l-grid__row">
   <div class="l-grid__col l-grid__col--1"></div>
@@ -98,7 +158,7 @@ I prefer to use the phrase "container" for something that is constrained to a ma
 </div>
 ```
 
-### Tiles
+### Tile
 The tile layout should be used only for horizontal grouping. The height of individual tiles should come from the component that they contain.
 
 There should be no style treatment on the the tiles - any kind of background or rounded corners or border should be applied to the component, not the tile.
@@ -158,7 +218,7 @@ Add more structure or components here as necessary.
 
 ## Components
 
-### Cards
+### Card
 
 ```html
 <div class="c-card-group">
@@ -198,7 +258,7 @@ Add more structure or components here as necessary.
 </div>
 ```
 
-### Buttons
+### Button
 A single button can stand on its own, but multiple buttons I prefer to put in groups
 ```html
 <a href="#" class="c-btn">Default Button</a>
@@ -212,7 +272,7 @@ A single button can stand on its own, but multiple buttons I prefer to put in gr
 ```
 
 ### List
-*Question*: should it be possible to use a list component outside of a `ul`/`li`? Does that make semantic sense? If we don't allow that then should we simply use the `li` (and not a class) for the list item?
+*Questions: should it be possible to use a list component outside of a `ul`/`li`? Does that make semantic sense? If we don't allow that then should we simply use the `li` (and not a class) for the list item?*
 
 #### Basic List
 ```html
@@ -229,7 +289,7 @@ If we need a different kind of bullet
 </ul>
 ```
 
-### Links
+### Link
 #### Basic Link
 By default, most links won't need a lot of extra markup
 ```html
@@ -429,6 +489,9 @@ The article summary could have different names including:
 
 Just pick one and stick with it.
 
+### Blog Post
+*Most likely a variation on Article - is there enough difference for its own component?*
+
 ### Award
 ```html
 <article class="c-award">
@@ -440,8 +503,6 @@ Just pick one and stick with it.
   </div>
 </article>
 ```
-
-### Blog Post
 
 ### Event
 ```html
@@ -517,6 +578,7 @@ These are links to the organization's social media profiles. They are not for so
 ```
 
 ## Forms
+*In progress*
 
 ### Account Signup
 ```html
@@ -551,7 +613,7 @@ These are links to the organization's social media profiles. They are not for so
 </form>
 ```
 
-## Widget
+## Widgets
 
 A widget is differentiated from a component in that a component is generally static while a widget generally has some level of interactivity.
 
@@ -732,8 +794,10 @@ A filter control provides the ability to filter a list of items. Depending on th
 ```
 
 ### Slider
+*Forthcoming*
 
 ## Navigation
+*In progress*
 
 ### Toolbar or Eyebrow
 
