@@ -3,7 +3,7 @@ A collection of sample component names and examples - because naming things is h
 
 ## Table of Contents
 
-1. [Nomenclaure](#nomenclature)
+1. [Nomenclature](#nomenclature)
     1. [Namespaces](#namespaces)
     - [Concepts](#concepts)
     - [Usage](#usage)
